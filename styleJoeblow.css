@@ -1,0 +1,113 @@
+html {
+	font-size:100%;
+	/* Permet d'utiliser l'unité rem */
+	/* % : permet de scaler la police par rapport à celle de la taille du navigateur de l'user */
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+
+.mainPage {
+	width:90%;
+	margin:auto;
+
+
+	font-family:Roboto,sans-serif;
+}
+
+/* ----------- HEADER VERT -------------- */
+/* -------------------------------------- */
+
+.header {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+
+	padding:0.5rem 2.5rem 0.5rem 2.5rem;
+
+	background-color:#2CDDA6;
+}
+
+.header__titre {
+	
+	font-size:2.5rem;
+	font-style:italic;
+	font-weight:700;
+	color:#001534;
+
+	text-shadow:0.2rem 0.05em #FFFFFF;
+}
+
+.nav {
+	display:flex;
+	flex-direction:row;
+
+	border-left:2px solid #001534;
+}
+
+
+.nav__lien {
+
+	padding:0 2rem 0 2rem;
+	border-left:2px solid #FFFFFF;
+
+
+	font-size:1.2rem;
+	font-weight:300;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+.nav__lien--last {
+	padding:0 0 0 2rem;
+}
+
+.nav__lien:hover{
+	color:#001534;
+}
+
+/* ---------------  CITATION HAUTE ----------------- */
+/* ------------------------------------------------- */
+
+main {
+	padding:0.5rem 2.5rem 0.5rem 2.5rem;
+	background-color:#001534;
+}
+
+.quote {
+	padding:2rem 0 2rem 0;
+}
+
+.quote__ligne {
+
+	text-align:right;
+	font-style:italic;
+	font-weight:700;
+	font-size:1.8rem;
+	color:#D6FFF5;
+}
+
+.quote__ligne--vert {
+	color:#2CDDA6
+}
+
+/* ------------------- PORTFOLIO ------------------- */
+/* ------------------------------------------------- */
+
+.portfolio {
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows:250px 250px;
+	gap:0.5rem;
+
+	padding:0.5rem;
+
+	border:1px solid #D6FFF5;
+}
+
+.projet {
+	background-color:#FFFFFF;
+}
