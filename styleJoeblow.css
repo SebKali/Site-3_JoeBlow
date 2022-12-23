@@ -91,7 +91,7 @@ main {
 }
 
 .quote__ligne--vert {
-	color:#2CDDA6
+	color:#2CDDA6;
 }
 
 /* ------------------- PORTFOLIO ------------------- */
@@ -109,5 +109,83 @@ main {
 }
 
 .projet {
-	background-color:#FFFFFF;
+	display:grid;
+	grid-template-rows:160px 60px 30px;
+
+	box-shadow:5px 5px 5px rgba(0,0,0,0.8);
+	border-bottom:1px solid #D6FFF5;
+
+	opacity:30%;
 }
+
+.projet:hover {
+	opacity:1;
+}
+
+.projet__image {
+}
+
+.projet__image--1 {
+	background:url("images/image1.jpg");
+	background-position:50% 55%;
+	background-size:cover;
+}
+
+.projet__image--2 {
+	background:url("images/image2.jpg");
+	background-position:center;
+	background-size:cover;
+}
+
+.projet__image--3 {
+	background:url("images/image3.jpg");
+	background-position:center;
+	background-size:cover;
+}
+
+.projet__image--4 {
+	background:url("images/image4.jpg");
+	background-position:50% 20%;
+	background-size:cover;
+}
+.projet__image--5 {
+	background:url("images/image5.jpg");
+	background-position:50% 30%;
+	background-size:cover;
+}
+.projet__image--6 {
+	background:url("images/image6.jpg");
+	background-position:center;
+	background-size:cover;
+}
+
+.projet__titre {
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	padding-left:1rem;
+
+	background-color:#2CDDA6;
+
+	color:#FFFFFF;
+	font-size:2rem;
+	font-style:italic;
+	font-weight:900;
+
+}
+
+.projet__sousTitre {
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	padding-left:1rem;
+
+	padding-left:1rem;
+
+	color:#FFFFFF;
+	font-size:0.8rem;
+	font-weight:300;
+
+}
+
+
