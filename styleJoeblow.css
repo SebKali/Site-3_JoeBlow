@@ -106,6 +106,9 @@ main {
 	padding:0.5rem;
 
 	border:1px solid #D6FFF5;
+	
+	/* Nouvelle animation en zoom */
+	position:relative;
 }
 
 
@@ -117,8 +120,13 @@ main {
 	border-bottom:1px solid #D6FFF5;
 	
 	opacity:40%;
-	transition:0.2s ease-in;
+	transition:.2s ease-in;
+
 }
+
+
+/* --- Fin animation ------------------------- */
+/*-------------------------------------------- */
 
 .projet__titre {
 	display:flex;
@@ -152,21 +160,6 @@ main {
 	transition:transform 0.5s ease-out;
 }
 
-	/* Animation opacité et remplissage du titre */
-	/* ----------------------------------------- */
-		.projet:hover {
-			opacity:1;
-			transition:0.5s ease-in;
-			z-index:2;
-		}
-
-		.projet:hover > .projet__titre:before { /* !! applique les règles a l'élément child quand hover parent */
-			transform:scaleX(1);
-		}
-
-	/* -------------------------------------- */
-
-
 .projet__sousTitre {
 	display:flex;
 	flex-direction:row;
@@ -180,6 +173,89 @@ main {
 	font-weight:300;
 
 }
+
+	/* Element affiché au zoom sur un projet ---------------- */
+	/* ------------------------------------------------------ */
+
+	.projet-zoom {
+		visibility:hidden;	/* masque l'élément jusqu'au hober */
+
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+
+		padding:1rem;
+		background-color:#001534;
+
+		display:grid;
+		grid-template-columns:60% 1fr;
+	}
+
+	.projet-zoom__image {
+		margin:1rem;
+
+		border-top:1px solid #D6FFF5;
+	}
+
+	.projet-zoom__texte {
+		display:flex;
+		flex-direction:column;
+		justify-content:flex-start;
+
+		margin:1rem;
+	}
+
+	.projet-zoom__titre {
+		font-size:3rem;
+		font-style:italic;
+		font-weight:700;
+		color:#FFFFFF;
+
+		text-shadow:0.2rem 0.05em #2CDDA6;
+
+		padding:1rem 0 1rem 0;
+		border-top:1px solid #D6FFF5;
+		border-bottom:1px solid #D6FFF5;
+
+	}
+
+	.projet-zoom__sousTitre {
+		display:flex;
+		/*height:100%;        /* permet de centrer le sous-titre dans le bloc */
+		/*align-items:center; /* permet de centrer le sous-titre dans le bloc */
+
+		font-size:1.:2rem;
+		color:#2CDAA6;
+		
+		padding:1rem 0 1rem 0;
+	}
+	
+	/* --- Fin animation ------------------------- */
+	/*-------------------------------------------- */
+
+
+
+		/* Animation opacité et remplissage du titre */
+		/* ----------------------------------------- */
+			.projet:hover {
+				opacity:1;
+				transition:0.5s ease-in;
+				z-index:2;
+			}
+
+			.projet:hover > .projet__titre:before { /* !! applique les règles a l'élément child quand hover parent */
+				transform:scaleX(1);
+			}
+
+			.projet:hover > .projet-zoom {
+				visibility:visible; /* Transition-delay ne fonctionne qu'avec visibility, pas display */
+				transition-delay:0.6s;
+			}
+
+		/* -------------------------------------- */
+
 
 .projet__image--1 {
 	background:url("images/image1.jpg");
