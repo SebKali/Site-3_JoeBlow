@@ -108,21 +108,77 @@ main {
 	border:1px solid #D6FFF5;
 }
 
+
 .projet {
 	display:grid;
 	grid-template-rows:160px 60px 30px;
 
 	box-shadow:5px 5px 5px rgba(0,0,0,0.8);
 	border-bottom:1px solid #D6FFF5;
-
-	opacity:30%;
+	
+	opacity:40%;
+	transition:0.2s ease-in;
 }
 
-.projet:hover {
-	opacity:1;
+.projet__titre {
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	padding-left:1rem;
+
+	/*background-color:#2CDDA6;*/
+	border-left:6px solid #2CDDA6;
+
+	color:#FFFFFF;
+	font-size:2rem;
+	font-style:italic;
+	font-weight:900;
+
+	position:relative;
+	transition:color 0.5s;	/* permet d'adoucir la transition de la police */
 }
 
-.projet__image {
+.projet__titre:before {
+	content:"";	/* propriété obligatoire, "" permet de ne rien afficher */
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:-1;
+	background-color:#2CDDA6;
+	transform:scaleX(0);
+	transform-origin:0 100%;	/* Sens de remplissage sweep */
+	transition:transform 0.5s ease-out;
+}
+
+	/* Animation opacité et remplissage du titre */
+	/* ----------------------------------------- */
+		.projet:hover {
+			opacity:1;
+			transition:0.5s ease-in;
+			z-index:2;
+		}
+
+		.projet:hover > .projet__titre:before { /* !! applique les règles a l'élément child quand hover parent */
+			transform:scaleX(1);
+		}
+
+	/* -------------------------------------- */
+
+
+.projet__sousTitre {
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	padding-left:1rem;
+
+	padding-left:1rem;
+
+	color:#FFFFFF;
+	font-size:0.8rem;
+	font-weight:300;
+
 }
 
 .projet__image--1 {
@@ -157,35 +213,6 @@ main {
 	background:url("images/image6.jpg");
 	background-position:center;
 	background-size:cover;
-}
-
-.projet__titre {
-	display:flex;
-	flex-direction:row;
-	align-items:center;
-	padding-left:1rem;
-
-	background-color:#2CDDA6;
-
-	color:#FFFFFF;
-	font-size:2rem;
-	font-style:italic;
-	font-weight:900;
-
-}
-
-.projet__sousTitre {
-	display:flex;
-	flex-direction:row;
-	align-items:center;
-	padding-left:1rem;
-
-	padding-left:1rem;
-
-	color:#FFFFFF;
-	font-size:0.8rem;
-	font-weight:300;
-
 }
 
 
