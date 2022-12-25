@@ -12,18 +12,22 @@
 </head>
 <body class="mainPage">
 	
+	<div id="projet-ancre"></div>
+
 	<header class="header">
 		<div>
 			<h1 class="header__titre">Joe Blow</h1>
 		</div>
 		<nav class="nav">
-			<a class="nav__lien" href="">Projets</a>
-			<a class="nav__lien" href="">A propos</a>
-			<a class="nav__lien nav__lien--last" href="">Contact</a>
+			<a href="#projet-ancre" class="nav__lien" href="">Projets</a>
+			<a href="#propos-ancre" class="nav__lien" href="">A propos</a>
+			<a href="#contact-ancre" class="nav__lien nav__lien--last" href="">Contact</a>
 		</nav>
 	</header>
 
 	<main>
+
+
 		<!-- CITATION -->
 		<div class="quote">
 		<p class="quote__ligne">"Nous sommes les <span class="quote__ligne quote__ligne--vert">créateurs de musique,</span></p>
@@ -122,10 +126,46 @@
 			</div>
 
 		</section>
+
+		<!-- Contact/Formulaire -->
+		<div id="contact-ancre"></div>
+
+		<section class="formulaire">
+
+			<h2 class="form__titre">Contactez-moi</h2>
+			
+			<form action="" method="get">
+				
+				<div class="form__nom">
+				<label for="nom">nom</label>
+				<input type="text" name="nom" id="nom" />	<!-- placeholder="Ex : Isabelle" -->
+				</div>
+
+				<div class="form__mail">
+				<label for="mail">email</label>
+				<input type="email" name="mail" id="mail" />	<!-- placeholder="Ex : Isabelle" -->
+				</div>
+
+				<div class="form__textarea">
+				<label for="msg">message</label>
+				<textarea name="msg" id="msg" rows="10"></textarea>
+				</div>
+
+				<div class="form__cta">
+				<input class="cta" type="submit" value="Envoyer">
+				</div>
+
+			</form>
+
+		</section>
+
 	</main>
 
+	<footer>
+		
+		<a href="#projet-ancre" class="header__titre">JB.</a>
 
-
+	</footer>
 
 </body>
 </html>

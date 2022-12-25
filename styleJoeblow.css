@@ -13,7 +13,6 @@ html {
 	width:90%;
 	margin:auto;
 
-
 	font-family:Roboto,sans-serif;
 }
 
@@ -39,6 +38,8 @@ html {
 	color:#001534;
 
 	text-shadow:0.2rem 0.05em #FFFFFF;
+
+	text-decoration:none;
 }
 
 .nav {
@@ -337,4 +338,105 @@ main {
 	background-size:cover;
 }
 
+/* ----------- FORMULAIRE -------------- */
+/* ------------------------------------- */
+
+.formulaire {
+	margin:4rem 0 2rem 0;
+	padding:2rem;
+
+	border:1px solid #D6FFF5;
+}
+
+form {
+	display:flex;
+	flex-direction:column;
+}
+
+label {
+	color:#D6FFF5;
+	font-size:1rem;
+	font-weight:200;
+
+	padding-bottom:0.5rem;
+}
+
+input, textarea {
+	border:1px solid #2CDDA6;
+	background-color:#001534;
+	padding:0.5rem;
+	font-size:1rem;
+	color:#FFFFFF;
+}
+
+.form__nom > input, .form__mail > input {
+	height:2rem;
+}
+
+input:focus, textarea:focus {
+	background-color:#FFFFFF;
+	color:#000000;
+}
+
+.form__titre {
+	font-size:2.5rem;
+	font-style:italic;
+	font-weight:700;
+	color:#FFFFFF;
+	text-shadow:0.2rem 0.05em #11AF82;
+
+	background-color:#2CDDA6;
+
+	padding:0.5rem 1rem 0.5rem 1rem;
+}
+
+.form__nom, .form__mail, .form__textarea  {
+	display:flex;
+	flex-direction:column;
+
+	margin-top:1.5rem;
+}
+
+.form__cta {
+	display:flex;
+	justify-content:center;
+
+	margin-top:2rem;
+}
+
+.cta {
+	font-size:1.5rem;
+	font-style:italic;
+	font-weight:500;
+	color:#FFFFFF;
+	text-shadow:0.2rem 0.05em #11AF82;
+
+	background-color:#2CDDA6;
+
+	padding:1rem 1.5rem 1rem 1.5rem;
+}
+
+/* -------------- FOOTER ------------ */
+/* ---------------------------------- */
+
+footer {
+	display:flex;
+	justify-content:center;
+
+	background:#2CDDA6;
+
+	padding:0.5rem 2rem 0.5rem 2rem;
+
+}
+
+.header__titre {
+	font-size:3rem;
+}
+
+footer .header__titre:hover {
+	color:#FFFFFF;
+
+	text-shadow:0.2rem 0.05em #001534;
+
+}
 
