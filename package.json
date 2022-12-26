@@ -1,0 +1,19 @@
+{
+  "name": "packagejoeblow",
+  "version": "1.0.0",
+  "description": "fichier package du site joeblow",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:./styleJoeblow.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebKali/siteJoeBlow.git"
+  },
+  "author": "Kali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SebKali/siteJoeBlow/issues"
+  },
+  "homepage": "https://github.com/SebKali/siteJoeBlow#readme"
+}

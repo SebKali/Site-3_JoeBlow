@@ -1,0 +1,16 @@
+//ANIMATIONS
+
+.projet {
+	transition:.2s ease-in;
+
+	&__titre {
+	transition:color 0.5s;	/* permet d'adoucir la transition de la police */
+
+		&:before {
+		transform:scaleX(0);
+		transform-origin:0 100%;	/* Sens de remplissage sweep */
+		transition:transform 0.5s ease-out;
+		}
+	}
+
+}

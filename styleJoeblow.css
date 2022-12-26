@@ -1,442 +1,163 @@
-html {
-	font-size:100%;
-	/* Permet d'utiliser l'unité rem */
-	/* % : permet de scaler la police par rapport à celle de la taille du navigateur de l'user */
-}
-
+@charset "UTF-8";
+/* UTILS */
+/* BASE */
+/* -------- STRUCTURE */
 * {
-	margin:0;
-	padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-.mainPage {
-	width:90%;
-	margin:auto;
-
-	font-family:Roboto,sans-serif;
+html {
+  font-size: 100%;
 }
 
-/* ----------- HEADER VERT -------------- */
-/* -------------------------------------- */
-
-.header {
-	display:flex;
-	flex-direction:row;
-	justify-content:space-between;
-	align-items:center;
-
-	padding:0.5rem 2.5rem 0.5rem 2.5rem;
-
-	background-color:#2CDDA6;
+body {
+  width: 90%;
+  margin: auto;
+  background-color: #001534;
 }
-
-.header__titre {
-	
-	font-size:2.5rem;
-	font-style:italic;
-	font-weight:700;
-	color:#001534;
-
-	text-shadow:0.2rem 0.05em #FFFFFF;
-
-	text-decoration:none;
-}
-
-.nav {
-	display:flex;
-	flex-direction:row;
-
-	border-left:2px solid #001534;
-}
-
-
-.nav__lien {
-
-	padding:0 2rem 0 2rem;
-	border-left:2px solid #FFFFFF;
-
-
-	font-size:1.2rem;
-	font-weight:300;
-	color:#FFFFFF;
-	text-decoration:none;
-}
-
-.nav__lien--last {
-	padding:0 0 0 2rem;
-}
-
-.nav__lien:hover{
-	color:#001534;
-}
-
-/* ---------------  CITATION HAUTE ----------------- */
-/* ------------------------------------------------- */
 
 main {
-	padding:0.5rem 2.5rem 0.5rem 2.5rem;
-	background-color:#001534;
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
 }
 
-.quote {
-	padding:2rem 0 2rem 0;
+/* ---------- TYPOGRAPHY */
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.titre {
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 700;
+  color: #001534;
+  text-decoration: none;
+  text-shadow: 0.2rem 0.05em #FFFFFF;
+}
+
+.nav__lien {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .quote__ligne {
-
-	text-align:right;
-	font-style:italic;
-	font-weight:700;
-	font-size:1.8rem;
-	color:#D6FFF5;
+  text-align: right;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #D6FFF5;
 }
-
 .quote__ligne--vert {
-	color:#2CDDA6;
+  color: #2CDDA6;
 }
-
-/* ------------------- PORTFOLIO ------------------- */
-/* ------------------------------------------------- */
-
-.portfolio {
-	display:grid;
-	grid-template-columns:1fr 1fr 1fr;
-	grid-template-rows:250px 250px;
-	gap:0.5rem;
-
-	padding:0.5rem;
-
-	border:1px solid #D6FFF5;
-	
-	/* Nouvelle animation en zoom */
-	position:relative;
-}
-
-
-.projet {
-	display:grid;
-	grid-template-rows:160px 60px 30px;
-
-	box-shadow:5px 5px 5px rgba(0,0,0,0.8);
-	border-bottom:1px solid #D6FFF5;
-	
-	opacity:40%;
-	transition:.2s ease-in;
-
-}
-
-
-/* --- Fin animation ------------------------- */
-/*-------------------------------------------- */
 
 .projet__titre {
-	display:flex;
-	flex-direction:row;
-	align-items:center;
-	padding-left:1rem;
-
-	/*background-color:#2CDDA6;*/
-	border-left:6px solid #2CDDA6;
-
-	color:#FFFFFF;
-	font-size:2rem;
-	font-style:italic;
-	font-weight:900;
-
-	position:relative;
-	transition:color 0.5s;	/* permet d'adoucir la transition de la police */
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 900;
+  text-shadow: 0.2rem 0.05em #2CDDA6;
 }
-
-.projet__titre:before {
-	content:"";	/* propriété obligatoire, "" permet de ne rien afficher */
-	position:absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	z-index:-1;
-	background-color:#2CDDA6;
-	transform:scaleX(0);
-	transform-origin:0 100%;	/* Sens de remplissage sweep */
-	transition:transform 0.5s ease-out;
-}
-
 .projet__sousTitre {
-	display:flex;
-	flex-direction:row;
-	align-items:center;
-	padding-left:1rem;
-
-	padding-left:1rem;
-
-	color:#FFFFFF;
-	font-size:0.8rem;
-	font-weight:300;
-
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
-	/* Element affiché au zoom sur un projet ---------------- */
-	/* ------------------------------------------------------ */
-
-	.projet-zoom {
-		visibility:hidden;	/* masque l'élément jusqu'au hober */
-
-		position:absolute;
-		top:0;
-		right:0;
-		bottom:0;
-		left:0;
-
-		padding:1rem;
-		background-color:#001534;
-
-		display:grid;
-		grid-template-columns:60% 1fr;
-
-	}
-
-	@keyframes createZoom {
-		from {
-			transform:scale(0);
-		}
-		to {
-			transform:scale(1);
-		}
-	}
-
-	.projet-zoom__image {
-		margin:1rem;
-
-		border-top:1px solid #D6FFF5;
-	}
-
-	.projet-zoom__texte {
-		display:flex;
-		flex-direction:column;
-		justify-content:flex-start;
-
-		margin:1rem;
-	}
-
-	.projet-zoom__titre {
-		font-size:3rem;
-		font-style:italic;
-		font-weight:700;
-		color:#FFFFFF;
-
-		text-shadow:0.2rem 0.05em #2CDDA6;
-
-		padding:1rem 0 1rem 0;
-		border-top:1px solid #D6FFF5;
-		border-bottom:1px solid #D6FFF5;
-
-	}
-
-	.projet-zoom__sousTitre {
-		display:flex;
-		/*height:100%;        /* permet de centrer le sous-titre dans le bloc */
-		/*align-items:center; /* permet de centrer le sous-titre dans le bloc */
-
-		font-size:1.:2rem;
-		color:#2CDAA6;
-		
-		padding:1rem 0 1rem 0;
-	}
-	
-	/* --- Fin animation ------------------------- */
-	/*-------------------------------------------- */
-
-
-
-		/* Animation opacité et remplissage du titre */
-		/* ----------------------------------------- */
-			.projet:hover {
-				opacity:1;
-				transition:0.5s ease-in;
-				z-index:2;
-			}
-
-			.projet:hover > .projet__titre:before { /* !! applique les règles a l'élément child quand hover parent */
-				transform:scaleX(1);
-			}
-
-			.projet:hover > .projet-zoom {
-				visibility:visible; /* Transition-delay ne fonctionne qu'avec visibility, pas display */
-				transition-delay:0.5s;	/* retarde l'animation (delayed)*/
-				animation : createZoom 2s;	/* Appel l'animation de zoom Keyframes */
-			}
-
-				.projet:hover > .projet-zoom--1 {
-					transform-origin:0 0;
-				}
-
-				.projet:hover > .projet-zoom--2 {
-					transform-origin:50% 0;
-				}
-
-				.projet:hover > .projet-zoom--3 {
-					transform-origin:100% 0;
-				}
-
-				.projet:hover > .projet-zoom--4 {
-					transform-origin:0 100%;
-				}
-
-				.projet:hover > .projet-zoom--5 {
-					transform-origin:50% 100%;
-				}
-
-				.projet:hover > .projet-zoom--6 {
-					transform-origin:100% 100%;
-				}
-
-				@keyframes createZoom { /*Crée l'animation d'apparition de zoom */
-				from {
-					transform:scale(0.2);
-					}
-				to {
-					transform:scale(1);
-					}
-				}
-
-
-
-		/* -------------------------------------- */
-
-
-.projet__image--1 {
-	background:url("images/image1.jpg");
-	background-position:50% 55%;
-	background-size:cover;
+/* LAYOUT */
+/* ------------ HEADER */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  background-color: #2CDDA6;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  border-left: 2px solid #001534;
+}
+.nav__lien {
+  padding: 0 2rem 0 2rem;
+  border-left: 2px solid #FFFFFF;
+}
+.nav__lien:hover {
+  color: #001534;
+}
+.nav__lien--last {
+  padding: 0 0 0 2rem;
 }
 
-.projet__image--2 {
-	background:url("images/image2.jpg");
-	background-position:center;
-	background-size:cover;
+/* ------------ BOX */
+.box {
+  margin: 2rem 0 2rem 0;
 }
 
-.projet__image--3 {
-	background:url("images/image3.jpg");
-	background-position:center;
-	background-size:cover;
+/* ----------- PROJET-GRID */
+.projet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px 250px;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #D6FFF5;
+  position: relative;
 }
 
-.projet__image--4 {
-	background:url("images/image4.jpg");
-	background-position:50% 20%;
-	background-size:cover;
+/* COMPOSANTS */
+/* ------------ PROJETS */
+.projet {
+  display: grid;
+  grid-template-rows: 160px 60px 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #D6FFF5;
+  opacity: 40%;
 }
-.projet__image--5 {
-	background:url("images/image5.jpg");
-	background-position:50% 30%;
-	background-size:cover;
+.projet__titre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+  border-left: 6px solid #2CDDA6;
+  position: relative;
 }
-.projet__image--6 {
-	background:url("images/image6.jpg");
-	background-position:center;
-	background-size:cover;
+.projet__titre:before {
+  content: ""; /* propriété obligatoire, "" permet de ne rien afficher */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #2CDDA6;
 }
-
-/* ----------- FORMULAIRE -------------- */
-/* ------------------------------------- */
-
-.formulaire {
-	margin:4rem 0 2rem 0;
-	padding:2rem;
-
-	border:1px solid #D6FFF5;
-}
-
-form {
-	display:flex;
-	flex-direction:column;
-}
-
-label {
-	color:#D6FFF5;
-	font-size:1rem;
-	font-weight:200;
-
-	padding-bottom:0.5rem;
+.projet__sousTitre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
-input, textarea {
-	border:1px solid #2CDDA6;
-	background-color:#001534;
-	padding:0.5rem;
-	font-size:1rem;
-	color:#FFFFFF;
+/* ------------ ANIMATIONS */
+.projet {
+  transition: 0.2s ease-in;
+}
+.projet__titre {
+  transition: color 0.5s; /* permet d'adoucir la transition de la police */
+}
+.projet__titre:before {
+  transform: scaleX(0);
+  transform-origin: 0 100%; /* Sens de remplissage sweep */
+  transition: transform 0.5s ease-out;
 }
 
-.form__nom > input, .form__mail > input {
-	height:2rem;
-}
+/* PAGES */
 
-input:focus, textarea:focus {
-	background-color:#FFFFFF;
-	color:#000000;
-}
-
-.form__titre {
-	font-size:2.5rem;
-	font-style:italic;
-	font-weight:700;
-	color:#FFFFFF;
-	text-shadow:0.2rem 0.05em #11AF82;
-
-	background-color:#2CDDA6;
-
-	padding:0.5rem 1rem 0.5rem 1rem;
-}
-
-.form__nom, .form__mail, .form__textarea  {
-	display:flex;
-	flex-direction:column;
-
-	margin-top:1.5rem;
-}
-
-.form__cta {
-	display:flex;
-	justify-content:center;
-
-	margin-top:2rem;
-}
-
-.cta {
-	font-size:1.5rem;
-	font-style:italic;
-	font-weight:500;
-	color:#FFFFFF;
-	text-shadow:0.2rem 0.05em #11AF82;
-
-	background-color:#2CDDA6;
-
-	padding:1rem 1.5rem 1rem 1.5rem;
-}
-
-/* -------------- FOOTER ------------ */
-/* ---------------------------------- */
-
-footer {
-	display:flex;
-	justify-content:center;
-
-	background:#2CDDA6;
-
-	padding:0.5rem 2rem 0.5rem 2rem;
-
-}
-
-.header__titre {
-	font-size:3rem;
-}
-
-footer .header__titre:hover {
-	color:#FFFFFF;
-
-	text-shadow:0.2rem 0.05em #001534;
-
-}
-
+/*# sourceMappingURL=styleJoeblow.css.map */

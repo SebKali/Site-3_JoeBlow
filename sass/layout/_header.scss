@@ -1,0 +1,37 @@
+
+// HEADER
+
+.header {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	@include padding();
+	background-color:$color1;
+	
+	&__titre {
+		//voir _typo h1
+	}
+}
+
+.nav {
+	display:flex;
+	flex-direction:row;
+	border-left:2px solid $color2;
+
+	&__lien {
+	padding:0 2rem 0 2rem;
+	border-left:2px solid $white;
+	//voir _typo nav
+		
+		&:hover {
+		color:$color2;
+		}
+
+		&--last {
+		padding:0 0 0 2rem;
+		}
+	}
+
+}
+

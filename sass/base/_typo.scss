@@ -1,0 +1,52 @@
+
+// TYPOGRAPHY
+
+body {
+	font-family:Roboto,sans-serif;
+}
+
+.titre {
+	font-size:2.5rem;
+	font-style:italic;
+	font-weight:700;
+	color:$color2;
+	text-decoration:none;
+	@include shadow($white);
+}
+
+.nav__lien {
+	font-size:1.2rem;
+	font-weight:300;
+	color:$white;
+	text-decoration:none;
+}
+
+.quote__ligne {
+	text-align:right;
+	font-style:italic;
+	font-weight:700;
+	font-size:1.8rem;
+	color:$color3;
+
+	&--vert {
+	color:$color1;
+	}		
+}
+
+.projet {
+
+	&__titre {
+	color:$white;
+	font-size:2rem;
+	font-style:italic;
+	font-weight:900;
+	@include shadow($color1);
+	}
+
+	&__sousTitre {
+	color:$white;
+	font-size:0.8rem;
+	font-weight:300;
+	}
+
+}

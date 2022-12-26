@@ -1,0 +1,22 @@
+
+//MIXINS
+
+//PADDING
+@mixin padding {
+	padding:$pad-top $pad-right $pad-bot $pad-left;
+}
+
+//MARGIN
+@mixin margin {
+	margin:$margin-top $margin-right $margin-bot $margin-left;
+}
+
+//OMBRES
+@mixin shadow($color) {
+	text-shadow:0.2rem 0.05em $color;
+}
+
+//BORDERS
+@mixin borders {
+	border:1px solid $color3;
+}

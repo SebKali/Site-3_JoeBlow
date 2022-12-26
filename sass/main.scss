@@ -1,0 +1,29 @@
+// MAIN
+
+//Imports --
+/* UTILS */
+@import "./utils/_variables.scss";
+@import "./utils/_mixins.scss";
+
+/* BASE */
+/* -------- STRUCTURE */
+@import "./base/_base.scss";
+/* ---------- TYPOGRAPHY */
+@import "./base/typo.scss";
+
+/* LAYOUT */
+/* ------------ HEADER */
+@import "./layout/_header.scss";
+/* ------------ BOX */
+@import "./layout/_box.scss";
+/* ----------- PROJET-GRID */
+@import "./layout/_projet-grid.scss";
+
+/* COMPOSANTS */
+/* ------------ PROJETS */
+@import "./composant/_projet.scss";
+/* ------------ ANIMATIONS */
+@import "./composant/_animations.scss";
+
+
+/* PAGES */

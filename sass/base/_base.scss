@@ -1,0 +1,26 @@
+
+// BASE
+
+* {
+	margin:0;
+	padding:0;
+}
+
+html {
+	font-size:100%;
+	// Permet d'utiliser l'unité rem
+	// % : permet de scaler la police par rapport à celle de la taille du navigateur de l'user
+}
+
+
+body {
+	width:90%;
+	margin:auto;
+
+	background-color:$color2;
+
+}
+
+main {
+	@include padding();
+}
