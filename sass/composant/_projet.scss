@@ -17,13 +17,8 @@
 
 		&:before {
 		content:"";	/* propriété obligatoire, "" permet de ne rien afficher */
-		position:absolute;
-		top:0;
-		right:0;
-		bottom:0;
-		left:0;
-		z-index:-1;
 		background-color:$color1;
+		@include pos-absolute-0;
 		}
 	}
 
@@ -32,9 +27,32 @@
 	flex-direction:row;
 	align-items:center;
 	padding-left:1rem;
+	}
 
-	color:#FFFFFF;
-	font-size:0.8rem;
-	font-weight:300;
+	&__image {
+		
+		&--1 {
+		@include image ("1", 50%, 55%);
+		}
+
+		&--2 {
+		@include image ("2", 50%, 50%);
+		}
+
+		&--3 {
+		@include image ("3", 50%, 50%);
+		}
+
+		&--4 {
+		@include image ("4", 50%, 20%);
+		}
+
+		&--5 {
+		@include image ("5", 50%, 30%);
+		}
+
+		&--6 {
+		@include image ("6", 50%, 50%);
+		}
 	}
 }

@@ -1,0 +1,38 @@
+// PROJET-ZOOM
+
+.projet-zoom {
+	visibility:hidden;	/* masque l'élément jusqu'au hover */
+	position:absolute;
+	padding:1rem;
+	background-color:$color2;
+	display:grid;
+	grid-template-columns:60% 1fr;
+	@include pos-absolute-0;
+
+	&__image {
+	margin:1rem;
+	border-top:1px solid $color3;
+	}
+
+	&__texte {
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	margin:1rem;
+	}
+
+	&__titre {
+		padding:1rem 0 1rem 0;
+		border-top:1px solid $color3;
+		border-bottom:1px solid $color3;
+	}
+
+	&__sousTitre {
+		display:flex;
+		//height:100%;         permet de centrer le sous-titre dans le bloc
+		//align-items:center;  permet de centrer le sous-titre dans le bloc
+		
+		padding:1rem 0 1rem 0;
+	}
+}
+	

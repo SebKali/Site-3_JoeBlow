@@ -20,3 +20,20 @@
 @mixin borders {
 	border:1px solid $color3;
 }
+
+//ABSOLUTE 0
+@mixin pos-absolute-0 {
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
+
+@mixin image ($num, $x-image, $y-image) {
+	background:url("public/images/image#{$num}.jpg");
+	background-position:$x-image $y-image;
+	background-size:cover;
+}
+
+

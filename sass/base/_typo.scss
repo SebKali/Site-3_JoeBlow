@@ -12,6 +12,12 @@ body {
 	color:$color2;
 	text-decoration:none;
 	@include shadow($white);
+
+	&--projet-zoom{
+	color:$white;
+	@include shadow($color1);
+	}
+	
 }
 
 .nav__lien {
@@ -50,3 +56,13 @@ body {
 	}
 
 }
+
+.projet-zoom {
+
+	&__sousTitre {
+	font-size:1.2rem;
+	color:$color1;
+	}
+}
+		
+
