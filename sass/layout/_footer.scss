@@ -1,0 +1,11 @@
+
+//FOOTER
+
+.footer {
+	display:flex;
+	justify-content:center;
+	background:$color1;
+	@include padding__box;
+
+}
+

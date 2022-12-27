@@ -8,19 +8,19 @@
 	transition:.2s ease-in;
 
 	&:hover {
-	opacity:1;
-	transition:0.5s ease-in;
-	z-index:2;
+		opacity:1;
+		transition:0.5s ease-in;
+		z-index:2;
 	}
 
 	&__titre {
-	transition:color 0.5s;	/* permet d'adoucir la transition de la police */
+		transition:color 0.5s;	/* permet d'adoucir la transition de la police */
 
 		&:before {
-		z-index:-1;
-		transform:scaleX(0);
-		transform-origin:0 100%;	/* Sens de remplissage sweep */
-		transition:transform 0.5s ease-out;
+			z-index:-1;
+			transform:scaleX(0);
+			transform-origin:0 100%;	/* Sens de remplissage sweep */
+			transition:transform 0.5s ease-out;
 		}
 	}
 
@@ -30,36 +30,36 @@
 .projet:hover {
 
 	> .projet__titre:before { /* !! applique les règles a l'élément child quand hover parent */
-	transform:scaleX(1);
+		transform:scaleX(1);
 	}
 
 	> .projet-zoom {
-	visibility:visible; /* Transition-delay ne fonctionne qu'avec visibility, pas display */
-	transition-delay:0.5s;	/* retarde l'animation (delayed)*/
-	animation : createZoom 2s;	/* Appel l'animation de zoom Keyframes */
+		visibility:visible; /* Transition-delay ne fonctionne qu'avec visibility, pas display */
+		transition-delay:0.5s;	/* retarde l'animation (delayed)*/
+		animation : createZoom 2s;	/* Appel l'animation de zoom Keyframes */
 
 		&--1 {
-		transform-origin:0 0;
+			transform-origin:0 0;
 		}
 
 		&--2 {
-		transform-origin:50% 0;
+			transform-origin:50% 0;
 		}
 
 		&--3 {
-		transform-origin:100% 0;
+			transform-origin:100% 0;
 		}
 
 		&--4 {
-		transform-origin:0 100%;
+			transform-origin:0 100%;
 		}
 
 		&--5 {
-		transform-origin:50% 100%;
+			transform-origin:50% 100%;
 		}
 
 		&--6 {
-		transform-origin:100% 100%;
+			transform-origin:100% 100%;
 		}
 	}
 }
@@ -74,4 +74,18 @@
 		to {
 			transform:scale(1);
 		}
+}
+
+.cta {
+
+	&:hover {
+		background-color:$color3;
+		color:$color2;
 	}
+}
+
+.footer .titre:hover {
+	color:$white;
+	@include shadow($color2);
+}
+

@@ -2,4 +2,22 @@
 
 .box {
 	@include margin;
+	@include borders($color3);
+	@include padding__box;
+
+	&--quote {
+		@include borders($color2);
+	}
+
+	&--projet-grid {
+		display:grid;
+		grid-template-columns:1fr 1fr 1fr;
+		grid-template-rows:250px 250px;
+		gap:0.5rem;
+		// Nécessaire pour l'animation zoom au hover
+		position:relative;
+	}
+
+	&--formulaire {
+	}
 }

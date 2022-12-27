@@ -6,7 +6,7 @@
 	flex-direction:row;
 	justify-content:space-between;
 	align-items:center;
-	@include padding();
+	@include padding__page;
 	background-color:$color1;
 	
 	&__titre {
@@ -20,12 +20,12 @@
 	border-left:2px solid $color2;
 
 	&__lien {
-	padding:0 2rem 0 2rem;
-	border-left:2px solid $white;
+		padding:0 2rem 0 2rem;
+		border-left:2px solid $white;
 	//voir _typo nav
 		
 		&--last {
-		padding:0 0 0 2rem;
+			padding:0 0 0 2rem;
 		}
 	}
 

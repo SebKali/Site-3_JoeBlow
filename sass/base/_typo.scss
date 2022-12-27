@@ -13,10 +13,16 @@ body {
 	text-decoration:none;
 	@include shadow($white);
 
-	&--projet-zoom{
-	color:$white;
-	@include shadow($color1);
+	&--projet-zoom {
+		color:$white;
+		@include shadow($color1);
 	}
+
+	&--formulaire {
+	color:$white;
+	@include shadow($color4);
+	}
+	
 	
 }
 
@@ -35,24 +41,24 @@ body {
 	color:$color3;
 
 	&--vert {
-	color:$color1;
+		color:$color1;
 	}		
 }
 
 .projet {
 
 	&__titre {
-	color:$white;
-	font-size:2rem;
-	font-style:italic;
-	font-weight:900;
-	@include shadow($color1);
+		color:$white;
+		font-size:2rem;
+		font-style:italic;
+		font-weight:900;
+		@include shadow($color1);
 	}
 
 	&__sousTitre {
-	color:$white;
-	font-size:0.8rem;
-	font-weight:300;
+		color:$white;
+		font-size:0.8rem;
+		font-weight:300;
 	}
 
 }
@@ -60,9 +66,37 @@ body {
 .projet-zoom {
 
 	&__sousTitre {
-	font-size:1.2rem;
-	color:$color1;
+		font-size:1.2rem;
+		color:$color1;
 	}
 }
 		
+.form {
+
+	&__label {
+		color:$color3;
+		font-size:1rem;
+		font-weight:200;
+	}
+
+	&__input {
+		font-size:1rem;
+		color:$white;
+
+		&:focus {
+			background-color:$white;
+			color:$color2;
+		}
+	}
+		
+}
+
+.cta {
+	font-size:1.5rem;
+	font-style:italic;
+	font-weight:500;
+	color:$white;
+	@include shadow($color4);
+}
+
 

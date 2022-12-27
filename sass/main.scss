@@ -17,15 +17,22 @@
 /* ------------ BOX */
 @import "./layout/_box.scss";
 /* ----------- PROJET-GRID */
-@import "./layout/_projet-grid.scss";
+/*@import "./layout/_projet-grid.scss";*/
 /* ----------- PROJET-ZOOM */
 @import "./layout/_projet-zoom.scss";
+/* ------------ FORMULAIRE */
+@import "./layout/_formulaire.scss";
+/* ------------ FOOTER */
+@import "./layout/_footer.scss";
+
 
 /* COMPOSANTS */
 /* ------------ PROJETS */
 @import "./composant/_projet.scss";
 /* ------------ ANIMATIONS */
 @import "./composant/_animations.scss";
+/* ------------ CTA */
+@import "./composant/_cta.scss";
 
 
 /* PAGES */

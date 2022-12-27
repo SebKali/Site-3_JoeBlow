@@ -38,6 +38,10 @@ body {
   color: #FFFFFF;
   text-shadow: 0.2rem 0.05em #2CDDA6;
 }
+.titre--formulaire {
+  color: #FFFFFF;
+  text-shadow: 0.2rem 0.05em #11AF82;
+}
 
 .nav__lien {
   font-size: 1.2rem;
@@ -75,6 +79,28 @@ body {
   color: #2CDDA6;
 }
 
+.form__label {
+  color: #D6FFF5;
+  font-size: 1rem;
+  font-weight: 200;
+}
+.form__input {
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+.form__input:focus {
+  background-color: #FFFFFF;
+  color: #001534;
+}
+
+.cta {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-shadow: 0.2rem 0.05em #11AF82;
+}
+
 /* LAYOUT */
 /* ------------ HEADER */
 .header {
@@ -101,19 +127,20 @@ body {
 /* ------------ BOX */
 .box {
   margin: 2rem 0 2rem 0;
+  border: 1px solid #D6FFF5;
+  padding: 1rem;
 }
-
-/* ----------- PROJET-GRID */
-.projet-grid {
+.box--quote {
+  border: 1px solid #001534;
+}
+.box--projet-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 250px 250px;
   gap: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid #D6FFF5;
   position: relative;
-}
-
+} /* ----------- PROJET-GRID */
+/*@import "./layout/_projet-grid.scss";*/
 /* ----------- PROJET-ZOOM */
 .projet-zoom {
   visibility: hidden; /* masque l'élément jusqu'au hover */
@@ -146,6 +173,46 @@ body {
 .projet-zoom__sousTitre {
   display: flex;
   padding: 1rem 0 1rem 0;
+}
+
+/* ------------ FORMULAIRE */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form__titre {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: #2CDDA6;
+}
+.form .form__nom, .form .form__mail, .form .form__textarea {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+.form__label {
+  padding-bottom: 0.5rem;
+}
+.form__input {
+  background-color: #001534;
+  padding: 0.5rem;
+  border: 1px solid #2CDDA6;
+}
+.form__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.form__nom > .form__input, .form__mail > .form__input {
+  height: 2rem;
+}
+
+/* ------------ FOOTER */
+.footer {
+  display: flex;
+  justify-content: center;
+  background: #2CDDA6;
+  padding: 1rem;
 }
 
 /* COMPOSANTS */
@@ -269,6 +336,22 @@ body {
     transform: scale(1);
   }
 }
+.cta:hover {
+  background-color: #D6FFF5;
+  color: #001534;
+}
+
+.footer .titre:hover {
+  color: #FFFFFF;
+  text-shadow: 0.2rem 0.05em #001534;
+}
+
+/* ------------ CTA */
+.cta {
+  background-color: #2CDDA6;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
 /* PAGES */
 
 /*# sourceMappingURL=styleJoeblow.css.map */

@@ -1,0 +1,39 @@
+
+// FORMULAIRE
+
+.form {
+	display:flex;
+	flex-direction:column;
+
+	&__titre {
+		padding:0.5rem 1rem 0.5rem 1rem;
+		background-color:$color1;
+	}
+
+	.form__nom, .form__mail, .form__textarea  {
+		display:flex;
+		flex-direction:column;
+		margin-top:1.5rem;
+	}
+
+	&__label {
+		padding-bottom:0.5rem;
+	}
+
+	&__input {
+		background-color:$color2;
+		padding:0.5rem;
+		@include borders($color1);
+	}
+
+	&__cta {
+	display:flex;
+	justify-content:center;
+	margin-top:2rem;
+	}
+}
+
+.form__nom > .form__input, .form__mail > .form__input {
+	height:2rem;
+}
+

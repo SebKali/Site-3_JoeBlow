@@ -2,8 +2,12 @@
 //MIXINS
 
 //PADDING
-@mixin padding {
+@mixin padding__page {
 	padding:$pad-top $pad-right $pad-bot $pad-left;
+}
+
+@mixin padding__box {
+	padding:$pad-box;
 }
 
 //MARGIN
@@ -17,8 +21,8 @@
 }
 
 //BORDERS
-@mixin borders {
-	border:1px solid $color3;
+@mixin borders ($color:$color3) {
+	border:1px solid $color;
 }
 
 //ABSOLUTE 0
