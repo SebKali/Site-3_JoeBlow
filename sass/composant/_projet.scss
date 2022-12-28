@@ -30,29 +30,32 @@
 	}
 
 	&__image {
+
+		@include image($image-num);
 		
-		&--1 {
-		@include image ("1", 50%, 55%);
-		}
+		
+		//&--1 {
+		//@include image ("1", 50%, 55%);
+		//}
 
-		&--2 {
-		@include image ("2", 50%, 50%);
-		}
+		//&--2 {
+		//@include image ("2", 50%, 50%);
+		//}
 
-		&--3 {
-		@include image ("3", 50%, 50%);
-		}
+		//&--3 {
+		//@include image ("3", 50%, 50%);
+		//}
 
-		&--4 {
-		@include image ("4", 50%, 20%);
-		}
+		//&--4 {
+		//@include image ("4", 50%, 20%);
+		//}
 
-		&--5 {
-		@include image ("5", 50%, 30%);
-		}
+		//&--5 {
+		//@include image ("5", 50%, 30%);
+		//}
 
-		&--6 {
-		@include image ("6", 50%, 50%);
-		}
+		//&--6 {
+		//@include image ("6", 50%, 50%);
+		//}
 	}
 }

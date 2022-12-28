@@ -24,10 +24,19 @@
 	left:0;
 }
 
-@mixin image ($num, $x-image, $y-image) {
-	background:url("public/images/image#{$num}.jpg");
-	background-position:$x-image $y-image;
-	background-size:cover;
+//@mixin image ($num, $x-image, $y-image) {
+//	background:url("public/images/image#{$num}.jpg");
+//	background-position:$x-image $y-image;
+//	background-size:cover;
+//}
+
+
+@mixin image ($image-num) {
+	@each $nom, $valeurs in $image-num {
+		&--#{$nom} {
+			background:url("#{$image-path}#{$nom}.jpg");
+			background-position:map-get($valeurs,x-image) map-get($valeurs, y-image);
+			background-size:cover;
+		}
+	}
 }
-
-

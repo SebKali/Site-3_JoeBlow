@@ -27,3 +27,33 @@ $margin-right:0;
 $margin-left:0;
 $margin__box:$margin-top $margin-right $margin-bot $margin-left;
 
+
+// IMAGES
+
+$image-path:public/images/image;
+$image-num:(
+	1:(
+		x-image:50%,
+		y-image:55%,
+		),
+	2:(
+		x-image:50%,
+		y-image:50%,
+		),
+	3:(
+		x-image:50%,
+		y-image:50%,
+		),
+	4:(
+		x-image:50%,
+		y-image:20%,
+		),
+	5:(
+		x-image:50%,
+		y-image:30%,
+		),
+	6:(
+		x-image:50%,
+		y-image:50%,
+		)
+);
