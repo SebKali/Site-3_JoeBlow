@@ -16,12 +16,14 @@ $pad-top:0.5rem;
 $pad-bot:0.5rem;
 $pad-left:2.5rem;
 $pad-right:2.5rem;
+$padding__page:$pad-top $pad-right $pad-bot $pad-left;
 
-$pad-box:1rem;
+$padding__box:1rem;
 
 // ------------ margin
 $margin-top:2rem;
 $margin-bot:2rem;
 $margin-right:0;
 $margin-left:0;
+$margin__box:$margin-top $margin-right $margin-bot $margin-left;
 

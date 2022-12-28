@@ -1,9 +1,9 @@
 //BOX
 
 .box {
-	@include margin;
+	margin:$margin__box;
+	padding:$padding__box;
 	@include borders($color3);
-	@include padding__box;
 
 	&--quote {
 		@include borders($color2);

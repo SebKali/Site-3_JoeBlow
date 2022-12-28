@@ -1,18 +1,8 @@
 
 //MIXINS
 
-//PADDING
-@mixin padding__page {
-	padding:$pad-top $pad-right $pad-bot $pad-left;
-}
-
 @mixin padding__box {
 	padding:$pad-box;
-}
-
-//MARGIN
-@mixin margin {
-	margin:$margin-top $margin-right $margin-bot $margin-left;
 }
 
 //OMBRES

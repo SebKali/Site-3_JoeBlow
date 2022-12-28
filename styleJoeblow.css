@@ -127,8 +127,8 @@ body {
 /* ------------ BOX */
 .box {
   margin: 2rem 0 2rem 0;
-  border: 1px solid #D6FFF5;
   padding: 1rem;
+  border: 1px solid #D6FFF5;
 }
 .box--quote {
   border: 1px solid #001534;
@@ -212,7 +212,7 @@ body {
   display: flex;
   justify-content: center;
   background: #2CDDA6;
-  padding: 1rem;
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
 }
 
 /* COMPOSANTS */

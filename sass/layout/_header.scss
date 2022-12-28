@@ -6,7 +6,7 @@
 	flex-direction:row;
 	justify-content:space-between;
 	align-items:center;
-	@include padding__page;
+	padding:$padding__page;
 	background-color:$color1;
 	
 	&__titre {

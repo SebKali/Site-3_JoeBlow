@@ -22,5 +22,5 @@ body {
 }
 
 main {
-	@include padding__page();
+	padding:$padding__page;
 }
