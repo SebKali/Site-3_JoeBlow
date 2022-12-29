@@ -156,7 +156,7 @@ body {
   .header {
     flex-direction: column;
     justify-content: center;
-    padding: 1rem 0 0.5rem 0;
+    padding: 1rem 0 1rem 0;
     align-items: center;
   }
 }
@@ -274,7 +274,13 @@ body {
     grid-template-rows: 60% 1fr;
   }
 }
-.projet-zoom__image {
+@media (max-width: 480px) {
+  .projet-zoom {
+    grid-template-rows: 1fr 1fr;
+    bottom: 65%;
+  }
+}
+.projet-zoom .projet-zoom__image {
   margin: 1rem;
   border-top: 1px solid #D6FFF5;
 }

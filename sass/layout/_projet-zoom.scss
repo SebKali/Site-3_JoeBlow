@@ -14,9 +14,20 @@
 		grid-template-rows:60% 1fr;
 	}
 
-	&__image {
+	@include mobile {
+		grid-template-rows:1fr 1fr;
+		bottom:65%
+	}
+
+	.projet-zoom__image {
 	margin:1rem;
 	border-top:1px solid $color3;
+
+	@include mobile {
+		//background-size:contain;
+		//background-repeat:no-repeat;
+		}
+
 	}
 
 	&__texte {
