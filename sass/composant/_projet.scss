@@ -7,6 +7,11 @@
 	border-bottom:2px solid $color3;
 	opacity:40%;
 
+	@include desktop-small {
+		grid-template-rows:230px 60px 30px;
+	}
+
+
 	&__titre {
 	display:flex;
 	flex-direction:row;

@@ -16,9 +16,24 @@ body {
   margin: auto;
   background-color: #001534;
 }
+@media (max-width: 1200px) {
+  body {
+    width: 100%;
+  }
+}
 
 main {
   padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+}
+@media (max-width: 768px) {
+  main {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    padding: 0.5rem 0 0.5rem 0;
+  }
 }
 
 /* ---------- TYPOGRAPHY */
@@ -34,6 +49,11 @@ body {
   text-decoration: none;
   text-shadow: 0.2rem 0.05em #FFFFFF;
 }
+@media (max-width: 768px) {
+  .titre {
+    font-size: 1.8rem;
+  }
+}
 .titre--projet-zoom {
   color: #FFFFFF;
   text-shadow: 0.2rem 0.05em #2CDDA6;
@@ -41,6 +61,11 @@ body {
 .titre--formulaire {
   color: #FFFFFF;
   text-shadow: 0.2rem 0.05em #11AF82;
+}
+@media (max-width: 480px) {
+  .titre {
+    text-align: center;
+  }
 }
 
 .nav__lien {
@@ -56,6 +81,12 @@ body {
   font-weight: 700;
   font-size: 1.8rem;
   color: #D6FFF5;
+}
+@media (max-width: 768px) {
+  .quote__ligne {
+    font-size: 1.3rem;
+    text-align: center;
+  }
 }
 .quote__ligne--vert {
   color: #2CDDA6;
@@ -100,6 +131,11 @@ body {
   color: #FFFFFF;
   text-shadow: 0.2rem 0.05em #11AF82;
 }
+@media (max-width: 768px) {
+  .cta {
+    font-size: 1.1rem;
+  }
+}
 
 /* LAYOUT */
 /* ------------ HEADER */
@@ -111,27 +147,91 @@ body {
   padding: 0.5rem 2.5rem 0.5rem 2.5rem;
   background-color: #2CDDA6;
 }
+@media (max-width: 768px) {
+  .header {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0 0.5rem 0;
+    align-items: center;
+  }
+}
+@media (max-width: 480px) {
+  .header__titre {
+    padding: 0 0 1rem 0;
+  }
+}
+
 .nav {
   display: flex;
   flex-direction: row;
   border-left: 2px solid #001534;
 }
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+  }
+}
 .nav__lien {
   padding: 0 2rem 0 2rem;
   border-left: 2px solid #FFFFFF;
 }
+@media (max-width: 768px) {
+  .nav__lien {
+    padding: 0 1rem 0 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .nav__lien {
+    width: 130%;
+    text-align: center;
+    border: 0;
+    padding: 0.5rem 0 0.5rem 0;
+    border-top: 1px solid #001534;
+  }
+}
 .nav__lien--last {
-  padding: 0 0 0 2rem;
+  padding-left: 2rem;
+}
+@media (max-width: 768px) {
+  .nav__lien--last {
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .nav__lien--last {
+    padding-left: 0;
+    border-bottom: 1px solid #001534;
+  }
 }
 
 /* ------------ BOX */
 .box {
-  margin: 2rem 0 2rem 0;
+  margin: 3rem 0 3rem 0;
   padding: 1rem;
   border: 1px solid #D6FFF5;
 }
+@media (max-width: 1024px) {
+  .box {
+    margin: 1.5rem 0 1.5rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .box {
+    border: 0;
+  }
+}
 .box--quote {
   border: 1px solid #001534;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .box--projet-grid {
   display: grid;
@@ -139,7 +239,20 @@ body {
   grid-template-rows: 250px 250px;
   gap: 0.5rem;
   position: relative;
-} /* ----------- PROJET-GRID */
+}
+@media (max-width: 1024px) {
+  .box--projet-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 320px 320px 320px;
+  }
+}
+@media (max-width: 768px) {
+  .box--projet-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(320px, 6);
+  }
+}
+/* ----------- PROJET-GRID */
 /*@import "./layout/_projet-grid.scss";*/
 /* ----------- PROJET-ZOOM */
 .projet-zoom {
@@ -154,6 +267,12 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+}
+@media (max-width: 1024px) {
+  .projet-zoom {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 1fr;
+  }
 }
 .projet-zoom__image {
   margin: 1rem;
@@ -206,6 +325,11 @@ body {
 .form__nom > .form__input, .form__mail > .form__input {
   height: 2rem;
 }
+@media (max-width: 768px) {
+  .form__nom > .form__input, .form__mail > .form__input {
+    height: 1rem;
+  }
+}
 
 /* ------------ FOOTER */
 .footer {
@@ -223,6 +347,11 @@ body {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
   border-bottom: 2px solid #D6FFF5;
   opacity: 40%;
+}
+@media (max-width: 1024px) {
+  .projet {
+    grid-template-rows: 230px 60px 30px;
+  }
 }
 .projet__titre {
   display: flex;
@@ -350,6 +479,11 @@ body {
 .cta {
   background-color: #2CDDA6;
   padding: 1rem 1.5rem 1rem 1.5rem;
+}
+@media (max-width: 768px) {
+  .cta {
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  }
 }
 
 /* PAGES */

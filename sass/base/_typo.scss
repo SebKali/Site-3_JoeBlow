@@ -13,6 +13,10 @@ body {
 	text-decoration:none;
 	@include shadow($white);
 
+	@include tablet {
+		font-size:1.8rem;
+	}
+
 	&--projet-zoom {
 		color:$white;
 		@include shadow($color1);
@@ -21,6 +25,10 @@ body {
 	&--formulaire {
 	color:$white;
 	@include shadow($color4);
+	}
+
+	@include mobile {
+		text-align:center;
 	}
 	
 	
@@ -39,6 +47,11 @@ body {
 	font-weight:700;
 	font-size:1.8rem;
 	color:$color3;
+
+	@include tablet {
+		font-size:1.3rem;
+		text-align:center;
+	}
 
 	&--vert {
 		color:$color1;
@@ -97,6 +110,10 @@ body {
 	font-weight:500;
 	color:$white;
 	@include shadow($color4);
+
+	@include tablet {
+		font-size:1.1rem;
+	}
 }
 
 

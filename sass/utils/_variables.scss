@@ -18,14 +18,20 @@ $pad-left:2.5rem;
 $pad-right:2.5rem;
 $padding__page:$pad-top $pad-right $pad-bot $pad-left;
 
+$padding__page--tablet:0.5rem 1rem 0.5rem 1rem;
+$padding__page--mobile:0.5rem 0 0.5rem 0;
+
 $padding__box:1rem;
 
+
 // ------------ margin
-$margin-top:2rem;
-$margin-bot:2rem;
+$margin-top:3rem;
+$margin-bot:3rem;
 $margin-right:0;
 $margin-left:0;
 $margin__box:$margin-top $margin-right $margin-bot $margin-left;
+
+$margin__box--desktopS:1.5rem 0 1.5rem 0;
 
 
 // IMAGES
@@ -56,4 +62,13 @@ $image-num:(
 		x-image:50%,
 		y-image:50%,
 		)
+);
+
+
+// BREAKPOINTS
+$breakpoints :(
+	mobile:480px,
+	tablet:768px,
+	desktop-small:1024px,
+	desktop-medium:1200px,
 );

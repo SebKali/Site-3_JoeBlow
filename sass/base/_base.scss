@@ -16,11 +16,22 @@ html {
 body {
 	width:90%;
 	margin:auto;
-
 	background-color:$color2;
+
+	@include desktop-medium {
+		width:100%;
+	}
 
 }
 
 main {
 	padding:$padding__page;
+
+	@include tablet {
+		padding:$padding__page--tablet;
+	}
+
+	@include mobile {
+		padding:$padding__page--mobile;
+	}
 }

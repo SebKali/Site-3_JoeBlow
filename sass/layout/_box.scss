@@ -5,8 +5,18 @@
 	padding:$padding__box;
 	@include borders($color3);
 
+	@include desktop-small {
+		margin:$margin__box--desktopS;
+	}
+
+	@include mobile {
+		border:0;
+	}
+
 	&--quote {
 		@include borders($color2);
+		padding-top:0;
+		padding-bottom:0;
 	}
 
 	&--projet-grid {
@@ -16,6 +26,16 @@
 		gap:0.5rem;
 		// Nécessaire pour l'animation zoom au hover
 		position:relative;
+
+		@include desktop-small {
+			grid-template-columns:1fr 1fr;
+			grid-template-rows :320px 320px 320px;
+		}
+
+		@include tablet {
+			grid-template-columns:1fr;
+			grid-template-rows : repeat(320px,6);
+		}
 	}
 
 	&--formulaire {

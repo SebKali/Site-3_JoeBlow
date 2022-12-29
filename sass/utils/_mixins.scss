@@ -24,13 +24,7 @@
 	left:0;
 }
 
-//@mixin image ($num, $x-image, $y-image) {
-//	background:url("public/images/image#{$num}.jpg");
-//	background-position:$x-image $y-image;
-//	background-size:cover;
-//}
-
-
+// IMAGE BACKGROUND - BOUCLE DE CREATION
 @mixin image ($image-num) {
 	@each $nom, $valeurs in $image-num {
 		&--#{$nom} {
@@ -38,5 +32,29 @@
 			background-position:map-get($valeurs,x-image) map-get($valeurs, y-image);
 			background-size:cover;
 		}
+	}
+}
+
+
+// MIXIN @MEDIA BREAKPOINT
+@mixin mobile {
+	@media (max-width:map-get($breakpoints, mobile)) {
+		@content
+	}
+}
+
+@mixin tablet {
+	@media (max-width:map-get($breakpoints, tablet)) {
+		@content
+	}
+}
+@mixin desktop-small {
+	@media (max-width:map-get($breakpoints, desktop-small)) {
+		@content
+	}
+}
+@mixin desktop-medium {
+	@media (max-width:map-get($breakpoints, desktop-medium)) {
+		@content
 	}
 }

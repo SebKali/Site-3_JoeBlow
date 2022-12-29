@@ -35,5 +35,9 @@
 
 .form__nom > .form__input, .form__mail > .form__input {
 	height:2rem;
+
+	@include tablet {
+		height:1rem;
+	}
 }
 
