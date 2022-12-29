@@ -35,6 +35,20 @@
 	}
 }
 
+@mixin projet-zoom--mobile ($image-num) {
+	@each $nom, $valeurs in $image-num {
+		&--#{$nom} {
+			@include mobile {
+				grid-template-rows:1fr 1fr;
+				position:absolute;
+				top:map-get($valeurs,top);
+				bottom:map-get($valeurs,bottom);
+			}
+		}
+	}
+}
+
+
 
 // MIXIN @MEDIA BREAKPOINT
 @mixin mobile {

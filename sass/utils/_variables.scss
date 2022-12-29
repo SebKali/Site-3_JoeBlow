@@ -41,26 +41,38 @@ $image-num:(
 	1:(
 		x-image:50%,
 		y-image:55%,
+		top:0,
+		bottom:65%,
 		),
 	2:(
 		x-image:50%,
 		y-image:50%,
+		top:10%,
+		bottom:55%,
 		),
 	3:(
 		x-image:50%,
 		y-image:50%,
+		top:30%,
+		bottom:35%,
 		),
 	4:(
 		x-image:50%,
 		y-image:20%,
+		top:45%,
+		bottom:20%,
 		),
 	5:(
 		x-image:50%,
 		y-image:30%,
+		top:65%,
+		bottom:0,
 		),
 	6:(
 		x-image:50%,
-		y-image:50%,
+		y-image:510%,
+		top:65%,
+		bottom:0
 		)
 );
 
