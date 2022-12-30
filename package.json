@@ -4,7 +4,8 @@
   "description": "fichier package du site joeblow",
   "main": "index.js",
   "scripts": {
-    "sass":"sass --watch ./sass/main.scss:./styleJoeblow.css --style expanded"
+    "sass":"sass --watch ./sass/main.scss:./public/css/noPrefixed/styleJoeblow.css --style expanded",
+	"prefix":"postcss ./public/css/noPrefixed/styleJoeblow.css --use autoprefixer -d ./public/css"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "Kali",
   "license": "ISC",
+  "browserslist":"last 4 versions",
   "bugs": {
     "url": "https://github.com/SebKali/siteJoeBlow/issues"
   },
