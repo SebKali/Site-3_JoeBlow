@@ -1,6 +1,10 @@
 
 // BASE
 
+@use "./../utils/_variables.scss" as variable;
+@use "./../utils/_mixins.scss" as mixin;
+
+
 * {
 	margin:0;
 	padding:0;
@@ -16,22 +20,22 @@ html {
 body {
 	width:90%;
 	margin:auto;
-	background-color:$color2;
+	background-color:variable.$color2;
 
-	@include desktop-medium {
+	@include mixin.desktop-medium {
 		width:100%;
 	}
 
 }
 
 main {
-	padding:$padding__page;
+	padding:variable.$padding__page;
 
-	@include tablet {
-		padding:$padding__page--tablet;
+	@include mixin.tablet {
+		padding:variable.$padding__page--tablet;
 	}
 
-	@include mobile {
-		padding:$padding__page--mobile;
+	@include mixin.mobile {
+		padding:variable.$padding__page--mobile;
 	}
 }

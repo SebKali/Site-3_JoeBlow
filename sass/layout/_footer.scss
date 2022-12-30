@@ -1,11 +1,13 @@
 
 //FOOTER
 
+@use "./../utils/_variables.scss" as variable;
+
 .footer {
 	display:flex;
 	justify-content:center;
-	background:$color1;
-	padding:$padding__page;
+	background:variable.$color1;
+	padding:variable.$padding__page;
 
 }
 

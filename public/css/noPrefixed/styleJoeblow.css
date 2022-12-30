@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* UTILS */
-/* BASE */
-/* -------- STRUCTURE */
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +33,6 @@ main {
   }
 }
 
-/* ---------- TYPOGRAPHY */
 body {
   font-family: Roboto, sans-serif;
 }
@@ -137,8 +133,6 @@ body {
   }
 }
 
-/* LAYOUT */
-/* ------------ HEADER */
 .header {
   display: flex;
   flex-direction: row;
@@ -212,7 +206,6 @@ body {
   }
 }
 
-/* ------------ BOX */
 .box {
   margin: 3rem 0 3rem 0;
   padding: 1rem;
@@ -252,9 +245,6 @@ body {
     grid-template-rows: repeat(320px, 6);
   }
 }
-/* ----------- PROJET-GRID */
-/*@import "./layout/_projet-grid.scss";*/
-/* ----------- PROJET-ZOOM */
 .projet-zoom {
   visibility: hidden; /* masque l'élément jusqu'au hover */
   position: absolute;
@@ -342,7 +332,6 @@ body {
   padding: 1rem 0 1rem 0;
 }
 
-/* ------------ FORMULAIRE */
 .form {
   display: flex;
   flex-direction: column;
@@ -379,7 +368,6 @@ body {
   }
 }
 
-/* ------------ FOOTER */
 .footer {
   display: flex;
   justify-content: center;
@@ -387,8 +375,6 @@ body {
   padding: 0.5rem 2.5rem 0.5rem 2.5rem;
 }
 
-/* COMPOSANTS */
-/* ------------ PROJETS */
 .projet {
   display: grid;
   grid-template-rows: 160px 60px 30px;
@@ -455,7 +441,6 @@ body {
   background-size: cover;
 }
 
-/* ------------ ANIMATIONS */
 .nav__lien:hover {
   color: #001534;
 }
@@ -523,9 +508,8 @@ body {
   text-shadow: 0.2rem 0.05em #001534;
 }
 
-/* ------------ CTA */
 .cta {
-  cursos: pointer;
+  cursor: pointer;
   background-color: #2CDDA6;
   padding: 1rem 1.5rem 1rem 1.5rem;
 }
@@ -535,6 +519,22 @@ body {
   }
 }
 
+/* UTILS */
+/* BASE */
+/* -------- STRUCTURE */
+/* ---------- TYPOGRAPHY */
+/* LAYOUT */
+/* ------------ HEADER */
+/* ------------ BOX */
+/* ----------- PROJET-GRID */
+/*@import "./layout/_projet-grid.scss";*/
+/* ----------- PROJET-ZOOM */
+/* ------------ FORMULAIRE */
+/* ------------ FOOTER */
+/* COMPOSANTS */
+/* ------------ PROJETS */
+/* ------------ ANIMATIONS */
+/* ------------ CTA */
 /* PAGES */
 
 /*# sourceMappingURL=styleJoeblow.css.map */

@@ -1,20 +1,23 @@
 //BOX
 
-.box {
-	margin:$margin__box;
-	padding:$padding__box;
-	@include borders($color3);
+@use "./../utils/_variables.scss" as variable;
+@use "./../utils/_mixins.scss" as mixin;
 
-	@include desktop-small {
-		margin:$margin__box--desktopS;
+.box {
+	margin:variable.$margin__box;
+	padding:variable.$padding__box;
+	@include mixin.borders(variable.$color3);
+
+	@include mixin.desktop-small {
+		margin:variable.$margin__box--desktopS;
 	}
 
-	@include mobile {
+	@include mixin.mobile {
 		border:0;
 	}
 
 	&--quote {
-		@include borders($color2);
+		@include mixin.borders(variable.$color2);
 		padding-top:0;
 		padding-bottom:0;
 	}
@@ -27,12 +30,12 @@
 		// Nécessaire pour l'animation zoom au hover
 		position:relative;
 
-		@include desktop-small {
+		@include mixin.desktop-small {
 			grid-template-columns:1fr 1fr;
 			grid-template-rows :320px 320px 320px;
 		}
 
-		@include tablet {
+		@include mixin.tablet {
 			grid-template-columns:1fr;
 			grid-template-rows : repeat(320px,6);
 		}

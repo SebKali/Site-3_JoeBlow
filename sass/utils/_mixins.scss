@@ -1,17 +1,19 @@
 
 //MIXINS
 
+@use "./../utils/_variables.scss" as variable;
+
 @mixin padding__box {
-	padding:$pad-box;
+	padding:variable.$pad-box;
 }
 
 //OMBRES
-@mixin shadow($color) {
+@mixin shadow($color:variable.$color2) {
 	text-shadow:0.2rem 0.05em $color;
 }
 
 //BORDERS
-@mixin borders ($color:$color3) {
+@mixin borders ($color:variable.$color3) {
 	border:1px solid $color;
 }
 
@@ -26,9 +28,9 @@
 
 // IMAGE BACKGROUND - BOUCLE DE CREATION
 @mixin image ($image-num) {
-	@each $nom, $valeurs in $image-num {
+	@each $nom, $valeurs in variable.$image-num {
 		&--#{$nom} {
-			background:url("#{$image-path}#{$nom}.jpg");
+			background:url("#{variable.$image-path}#{$nom}.jpg");
 			background-position:map-get($valeurs,x-image) map-get($valeurs, y-image);
 			background-size:cover;
 		}
@@ -36,7 +38,7 @@
 }
 
 @mixin projet-zoom--mobile ($image-num) {
-	@each $nom, $valeurs in $image-num {
+	@each $nom, $valeurs in variable.$image-num {
 		&--#{$nom} {
 			@include mobile {
 				grid-template-rows:1fr 1fr;
@@ -52,23 +54,23 @@
 
 // MIXIN @MEDIA BREAKPOINT
 @mixin mobile {
-	@media (max-width:map-get($breakpoints, mobile)) {
+	@media (max-width:map-get(variable.$breakpoints, mobile)) {
 		@content
 	}
 }
 
 @mixin tablet {
-	@media (max-width:map-get($breakpoints, tablet)) {
+	@media (max-width:map-get(variable.$breakpoints, tablet)) {
 		@content
 	}
 }
 @mixin desktop-small {
-	@media (max-width:map-get($breakpoints, desktop-small)) {
+	@media (max-width:map-get(variable.$breakpoints, desktop-small)) {
 		@content
 	}
 }
 @mixin desktop-medium {
-	@media (max-width:map-get($breakpoints, desktop-medium)) {
+	@media (max-width:map-get(variable.$breakpoints, desktop-medium)) {
 		@content
 	}
 }

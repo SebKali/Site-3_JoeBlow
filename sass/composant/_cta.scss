@@ -1,12 +1,15 @@
 
 // CTA CALL TO ACTION
 
+@use "./../utils/_variables.scss" as variable;
+@use "./../utils/_mixins.scss" as mixin;
+
 .cta {
-	cursos:pointer;
-	background-color:$color1;
+	cursor:pointer;
+	background-color:variable.$color1;
 	padding:1rem 1.5rem 1rem 1.5rem;
 
-	@include tablet{
+	@include mixin.tablet{
 		padding:0.4rem 0.8rem 0.4rem 0.8rem;
 	}
 }

@@ -1,19 +1,23 @@
 
 // HEADER
 
+@use "./../utils/_variables.scss" as variable;
+@use "./../utils/_mixins.scss" as mixin;
+
+
 .header {
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
 	align-items:center;
-	padding:$padding__page;
-	background-color:$color1;
+	padding:variable.$padding__page;
+	background-color:variable.$color1;
 
-	@include tablet {
-		padding:$padding__page--tablet;
+	@include mixin.tablet {
+		padding:variable.$padding__page--tablet;
 	}
 
-	@include mobile {
+	@include mixin.mobile {
 		flex-direction:column;
 		justify-content:center;
 		padding:1rem 0 1rem 0;
@@ -22,7 +26,7 @@
 
 	&__titre {
 
-		@include mobile {
+		@include mixin.mobile {
 			padding:0 0 1rem 0;
 		}
 		//voir _typo h1
@@ -32,9 +36,9 @@
 .nav {
 	display:flex;
 	flex-direction:row;
-	border-left:2px solid $color2;
+	border-left:2px solid variable.$color2;
 
-	@include mobile {
+	@include mixin.mobile {
 		flex-direction:column;
 		justify-content:center;
 		align-items:center;
@@ -43,18 +47,18 @@
 
 	&__lien {
 		padding:0 2rem 0 2rem;
-		border-left:2px solid $white;
+		border-left:2px solid variable.$white;
 
-		@include tablet {
+		@include mixin.tablet {
 			padding:0 1rem 0 1rem;
 		}
 
-		@include mobile {
+		@include mixin.mobile {
 			width:130%;
 			text-align:center;
 			border:0;
 			padding:0.5rem 0 0.5rem 0;
-			border-top:1px solid $color2;
+			border-top:1px solid variable.$color2;
 		}
 
 	//voir _typo nav
@@ -62,13 +66,13 @@
 		&--last {
 			padding-left:2rem;
 
-			@include tablet {
+			@include mixin.tablet {
 				padding-left:1rem;
 			}
 
-			@include mobile {
+			@include mixin.mobile {
 				padding-left:0;
-				border-bottom:1px solid $color2;
+				border-bottom:1px solid variable.$color2;
 			}
 		}
 	}

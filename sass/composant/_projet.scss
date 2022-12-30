@@ -1,13 +1,16 @@
 //PROJETS
 
+@use "./../utils/_variables.scss" as variable;
+@use "./../utils/_mixins.scss" as mixin;
+
 .projet {
 	display:grid;
 	grid-template-rows:160px 60px 30px;
 	box-shadow:5px 5px 5px rgba(0,0,0,0.8);
-	border-bottom:2px solid $color3;
+	border-bottom:2px solid variable.$color3;
 	opacity:40%;
 
-	@include desktop-small {
+	@include mixin.desktop-small {
 		grid-template-rows:230px 60px 30px;
 	}
 
@@ -17,13 +20,13 @@
 	flex-direction:row;
 	align-items:center;
 	padding-left:1rem;
-	border-left:6px solid $color1;
+	border-left:6px solid variable.$color1;
 	position:relative;
 
 		&:before {
 		content:"";	/* propriété obligatoire, "" permet de ne rien afficher */
-		background-color:$color1;
-		@include pos-absolute-0;
+		background-color:variable.$color1;
+		@include mixin.pos-absolute-0;
 		}
 	}
 
@@ -36,7 +39,7 @@
 
 	&__image {
 
-		@include image($image-num);
+		@include mixin.image(variable.$image-num);
 		
 		
 		//&--1 {

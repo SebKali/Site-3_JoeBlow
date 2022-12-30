@@ -1,13 +1,16 @@
 
 // FORMULAIRE
 
+@use "./../utils/_variables.scss" as variable;
+@use "./../utils/_mixins.scss" as mixin;
+
 .form {
 	display:flex;
 	flex-direction:column;
 
 	&__titre {
 		padding:0.5rem 1rem 0.5rem 1rem;
-		background-color:$color1;
+		background-color:variable.$color1;
 	}
 
 	.form__nom, .form__mail, .form__textarea  {
@@ -21,9 +24,9 @@
 	}
 
 	&__input {
-		background-color:$color2;
+		background-color:variable.$color2;
 		padding:0.5rem;
-		@include borders($color1);
+		@include mixin.borders(variable.$color1);
 	}
 
 	&__cta {
@@ -36,7 +39,7 @@
 .form__nom > .form__input, .form__mail > .form__input {
 	height:2rem;
 
-	@include tablet {
+	@include mixin.tablet {
 		height:1rem;
 	}
 }

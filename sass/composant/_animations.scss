@@ -1,7 +1,10 @@
 //ANIMATIONS
 
+@use "./../utils/_variables.scss" as variable;
+@use "./../utils/_mixins.scss" as mixin;
+
 .nav__lien:hover {
-	color:$color2;
+	color:variable.$color2;
 }
 
 .projet {
@@ -79,13 +82,13 @@
 .cta {
 
 	&:hover {
-		background-color:$color3;
-		color:$color2;
+		background-color:variable.$color3;
+		color:variable.$color2;
 	}
 }
 
 .footer .titre:hover {
-	color:$white;
-	@include shadow($color2);
+	color:variable.$white;
+	@include mixin.shadow(variable.$color2);
 }
 

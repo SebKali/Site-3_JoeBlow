@@ -1,24 +1,28 @@
 // PROJET-ZOOM
 
+@use "./../utils/_variables.scss" as variable;
+@use "./../utils/_mixins.scss" as mixin;
+
+
 .projet-zoom {
 	visibility:hidden;	/* masque l'élément jusqu'au hover */
 	position:absolute;
 	padding:1rem;
-	background-color:$color2;
+	background-color:variable.$color2;
 	display:grid;
 	grid-template-columns:60% 1fr;
-	@include pos-absolute-0;
+	@include mixin.pos-absolute-0;
 
-	@include desktop-small {
+	@include mixin.desktop-small {
 		grid-template-columns:1fr;
 		grid-template-rows:60% 1fr;
 	}
 
-	@include projet-zoom--mobile ($image-num);
+	@include mixin.projet-zoom--mobile (variable.$image-num);
 
 	.projet-zoom__image {
 	margin:1rem;
-	border-top:1px solid $color3;
+	border-top:1px solid variable.$color3;
 	}
 
 	&__texte {
@@ -30,8 +34,8 @@
 
 	&__titre {
 		padding:1rem 0 1rem 0;
-		border-top:1px solid $color3;
-		border-bottom:1px solid $color3;
+		border-top:1px solid variable.$color3;
+		border-bottom:1px solid variable.$color3;
 	}
 
 	&__sousTitre {

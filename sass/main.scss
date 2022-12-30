@@ -2,37 +2,37 @@
 
 //Imports --
 /* UTILS */
-@import "./utils/_variables.scss";
-@import "./utils/_mixins.scss";
+@use "./utils/_variables.scss";
+@use "./utils/_mixins.scss";
 
 /* BASE */
 /* -------- STRUCTURE */
-@import "./base/_base.scss";
+@use "./base/_base.scss";
 /* ---------- TYPOGRAPHY */
-@import "./base/typo.scss";
+@use "./base/typo.scss";
 
 /* LAYOUT */
 /* ------------ HEADER */
-@import "./layout/_header.scss";
+@use "./layout/_header.scss";
 /* ------------ BOX */
-@import "./layout/_box.scss";
+@use "./layout/_box.scss";
 /* ----------- PROJET-GRID */
 /*@import "./layout/_projet-grid.scss";*/
 /* ----------- PROJET-ZOOM */
-@import "./layout/_projet-zoom.scss";
+@use "./layout/_projet-zoom.scss";
 /* ------------ FORMULAIRE */
-@import "./layout/_formulaire.scss";
+@use "./layout/_formulaire.scss";
 /* ------------ FOOTER */
-@import "./layout/_footer.scss";
+@use "./layout/_footer.scss";
 
 
 /* COMPOSANTS */
 /* ------------ PROJETS */
-@import "./composant/_projet.scss";
+@use "./composant/_projet.scss";
 /* ------------ ANIMATIONS */
-@import "./composant/_animations.scss";
+@use "./composant/_animations.scss";
 /* ------------ CTA */
-@import "./composant/_cta.scss";
+@use "./composant/_cta.scss";
 
 
 /* PAGES */
